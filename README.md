@@ -1,2 +1,2 @@
-# COVIDmap-au
-A map for COVID in aus
+# COVIDmap-nsw
+A map for COVID in nsw
