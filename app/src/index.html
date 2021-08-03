@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVIDmap-auaddresses</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.css"
+   crossorigin=""/>
+</head>
+<body>
+    <div id="app"></div>
+    <div class='container'>
+        <h1 class="title is-1">Sources</h1>
+        <table class="table is-bordered">
+            <tr>
+                <th>State</th>
+                <th>Source</th>
+            </tr>
+            <tr>
+                <td>NSW</td>
+                <td><a href='https://data.nsw.gov.au/data/dataset/covid-19-cases-by-location'>NSW Health</a></td>
+            </tr>
+            <tr>
+                <td>VIC, WA, QLD</td>
+                <td><a href="https://www.theguardian.com/australia-news/datablog/ng-interactive/2020/apr/24/coronavirus-australia-numbers-how-many-new-cases-today-maps-deaths-death-toll-covid-19-stats-statistics-graph-map-by-postcode">The Guardian</a> | <a href='https://docs.google.com/spreadsheets/d/1q5gdePANXci8enuiS4oHUJxcxC13d6bjMRSicakychE/edit#gid=1250930945'>(json feed links)</a></td>
+            </tr>
+            <tr>
+                <td>Mapping</td>
+                <td>Australian Bureau of Statistics from <a href="https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1270.0.55.003July%202016?OpenDocument">2016</a> and <a href="https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1270.0.55.003July%202019?OpenDocument">2019</a> data</td>
+            </tr>
+        </table>
+        <h1 class="title is-1">Info/Commentary as of 24/04/2020</h1>
+        <div class="content">
+            <ul>
+                <li>If the map is running slowly for you, try toggling NSW. The map overlay is computationally expensive.</li>
+                <li>Each state is split differently because I wanted to show the highest fidelity of data available. 
+                    NSW is by postcode (which is what produces weird gaps and overlaps at the state borders), everywhere else is by Local Government Area.
+                </li>
+                <li>QLD used to be by Health and Hospital Service areas but The Guardian started releasing their scrape per LGA. 
+                    Probably to normalise it against the other states I guess.
+                </li>
+                <li>You can grab the code or any assets used here like the mapping overlay data from this project's 
+                    <a href='https://github.com/oldmate7000/COVIDmap-au' target="_blank">Github Repo</a>
+                </li>
+                <li>The number for each area represents the historical cumulative total of cases in the area. 
+                    It's possible that on any given day of viewing that there has been a majority or complete recovery.
+                </li>
+            </ul>
+        </div>        
+    </div>
+
+    
+
+</body>
+
+</html>
